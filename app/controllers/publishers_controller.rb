@@ -20,7 +20,7 @@ class PublishersController < ApplicationController
 
         respond_to do |format|
             format.html { render 'refable/index' }
-            format.json { render json: @results }
+            format.json { render json: refables_to_json(@results) }
         end
     end
 

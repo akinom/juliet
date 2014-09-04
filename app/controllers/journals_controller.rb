@@ -22,6 +22,7 @@ class JournalsController < ApplicationController
 
     respond_with(@refable) do |format|
       format.html { render 'refable/index' }
+      format.json { render json: refables_to_json(@results) }
     end
   end
 
