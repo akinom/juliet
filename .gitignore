@@ -6,3 +6,4 @@ solr/pids/
 solr/development
 solr/test
 solr/production
+.idea/
