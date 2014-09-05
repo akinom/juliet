@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 4.1.0'
+gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -9,14 +9,17 @@ gem 'sqlite3'
 
 gem 'json'
 
-gem 'sass-rails',   '~> 4.0.0'
-gem 'coffee-rails', '~> 4.0.0'
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
-gem 'uglifier', '>= 1.0.3'
-
+  gem 'uglifier', '>= 1.0.3'
+end
 
 gem 'jquery-rails'
 
@@ -24,7 +27,7 @@ gem 'jquery-rails'
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
-gem 'jbuilder'
+# gem 'jbuilder'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -37,14 +40,11 @@ gem 'jbuilder'
 
 gem 'kaminari'
 gem 'execjs'
-gem 'therubyracer', :platforms => :ruby
+gem 'therubyracer', '~> 0.12.1'
+gem 'factory_girl_rails'
 gem 'ejs'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
-
-group :production do
-  gem 'pg'
-end
 
 group :development do
   gem "better_errors"
@@ -52,14 +52,13 @@ group :development do
 end
 
 group :development, :test do
-    gem 'rspec-rails', '~> 3.0.0'
+    gem 'rspec-rails', '~> 2.0'
 end
 
 group :test do
-  gem 'factory_girl_rails'
-  gem 'webmock'
-  gem 'capybara'
-  gem 'database_cleaner'
-  gem 'poltergeist'
-  gem 'sunspot_test'
+    gem 'webmock'
+    gem 'capybara'
+    gem 'database_cleaner', "<=1.0.1" # 1.1.0 is broken
+    gem 'poltergeist'
+    gem 'sunspot_test'
 end
