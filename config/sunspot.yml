@@ -14,6 +14,12 @@ development:
     log_level: INFO
     path: /solr/development
 
+poarwigdemo:
+  solr:
+    hostname: localhost
+    port: 8982
+    log_level: DEBUG
+
 test:
   solr:
     hostname: localhost
