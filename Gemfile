@@ -17,6 +17,7 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
+  # gem 'therubyracer', '~> 0.12.1'
 
   gem 'uglifier', '>= 1.0.3'
 end
@@ -40,7 +41,6 @@ gem 'jquery-rails'
 
 gem 'kaminari'
 gem 'execjs'
-gem 'therubyracer', '~> 0.12.1'
 gem 'factory_girl_rails'
 gem 'ejs'
 gem 'sunspot_rails'
@@ -48,9 +48,8 @@ gem 'sunspot_solr'
 
 group :development do
   gem "better_errors"
-  gem "binding_of_caller"
-end
-
+end 
+#
 group :development, :test do
     gem 'rspec-rails', '~> 2.0'
 end
