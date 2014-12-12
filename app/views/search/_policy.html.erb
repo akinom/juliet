@@ -22,14 +22,14 @@
                 }.fetch(policy.method_of_acquisition, "")
             %>
         </dd>
-        <dt>Opt-out Required</dt>
-        <dd>
+        <dt class="opt_out_required">Opt-out Required</dt>
+        <dd class="opt_out_required">
             <% unless policy.opt_out_required.nil? %>
                 <%= policy.opt_out_required ? 'Yes' : 'No' %>
             <% end %>
         </dd>
-        <dt title="Should Request Opt-out Papers">Should Request Opt-out Papers</dt>
-        <dd>
+        <dt class="should_request_opt_out" title="Should Request Opt-out Papers">Should Request Opt-out Papers</dt>
+        <dd class="should_request_opt_out">
             <% unless policy.should_request.nil? %>
                 <%= policy.should_request ? 'Yes' : 'No' %>
             <% end %>

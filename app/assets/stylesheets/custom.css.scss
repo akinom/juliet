@@ -92,6 +92,10 @@ h1 .btn, h3 .btn {
     margin-bottom: 5px;
 }
 
+.opt_out_required, .should_request_opt_out {
+  display: none;
+}
+
 .romeo-green {
     background-color: #dff0d8;
 }
