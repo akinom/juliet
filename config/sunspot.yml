@@ -10,15 +10,16 @@ production:
 development:
   solr:
     hostname: localhost
-    port: 8982
-    log_level: INFO
-    path: /solr/development
+    port: 8983
+    path: /solr/juliet_dev
+    log_level: DEBUG
 
-poarwigdemo:
+qa:
   solr:
     hostname: localhost
-    port: 8982
-    log_level: DEBUG
+    port: 8983
+    log_level: INFO
+
 
 test:
   solr:
