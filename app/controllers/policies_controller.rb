@@ -41,7 +41,8 @@ class PoliciesController < ApplicationController
 
         def policy_params
             params.require(:policy).permit(:contact, :embargo, :note, :requirements,
-                                           :method_of_acquisition, :opt_out_required,
+                                           :method_of_acquisition, :print_version,
+                                           :opt_out_required,
                                            :should_request, :message)
         end
 end

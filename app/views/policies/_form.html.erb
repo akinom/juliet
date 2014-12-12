@@ -18,20 +18,35 @@
     </div>
 
     <div class="form-group">
-        <%= f.label :method_of_acquisition, "Method of Acquisition",
-                class: "control-label col-sm-3" %>
-        <div class="col-sm-6">
-            <%= f.select :method_of_acquisition,
-                options_for_select([
-                    ['Harvest', 'HARVEST'],
-                    ['Individual download', 'INDIVIDUAL_DOWNLOAD'],
-                    ['Recruit from author - FPV accepted', 'RECRUIT_FROM_AUTHOR_FPV'],
-                    ['Recruit from author - manuscript only', 'RECRUIT_FROM_AUTHOR_MANUSCRIPT'],
-                    ['Sword', 'SWORD']],
-                    @policy.method_of_acquisition || 'RECRUIT_FROM_AUTHOR_MANUSCRIPT'),
-                {}, {class: "form-control"}
-            %>
-        </div>
+      <%= f.label :print_version, "Print Version of Manuscript",
+                  class: "control-label col-sm-3" %>
+      <div class="col-sm-6">
+        <%= f.select :print_version,
+                     options_for_select([['Select A Version', ''],
+                                         ['Preprint', 'PREPRINT'],
+                                         ['Postprint', 'POSTPRINT'],
+                                         ['Finalprint', 'FINALPRINT']],
+                                        @policy.print_version),
+                     {}, {class: "form-control"}
+        %>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <%= f.label :method_of_acquisition, "Method of Acquisition",
+                  class: "control-label col-sm-3" %>
+      <div class="col-sm-6">
+        <%= f.select :method_of_acquisition,
+                     options_for_select([['Select A Method', ''],
+                                         ['Individual download', 'INDIVIDUAL_DOWNLOAD'],
+                                         ['Recruit from author', 'RECRUIT_FROM_AUTHOR'],
+                                         ['Harvest', 'HARVEST'],
+                                         ['Sword', 'SWORD']],
+                                        @policy.method_of_acquisition),
+                     {}, {class: "form-control"}
+        %>
+      </div>
     </div>
 
     <div class="form-group">

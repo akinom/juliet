@@ -7,12 +7,17 @@
         <dd><%= policy.contact %></dd>
         <dt>Embargo</dt>
         <dd><%= policy.embargo %></dd>
-        <dt>Method of Acquisition</dt>
+      <dt>Print Version of Manuscript</dt>
+      <dd> <%= {   "PREPRINT" => "Preprint",
+              "POSTPRINT" => "Postprint",
+              "FINALPRINT" => "Final Print"}.fetch(policy.print_version, "")
+      %>
+      </dd>
+      <dt>Method of Acquisition</dt>
         <dd>
             <%= {   "SWORD" => "Sword",
                     "HARVEST" => "Harvest",
                     "INDIVIDUAL_DOWNLOAD" => "Individual download",
-                    "RECRUIT_FROM_AUTHOR_FPV" => "Recruit from author - FPV accepted",
                     "RECRUIT_FROM_AUTHOR_MANUSCRIPT" => "Recruit from author - manuscript only"
                 }.fetch(policy.method_of_acquisition, "")
             %>

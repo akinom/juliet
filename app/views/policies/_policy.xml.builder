@@ -4,6 +4,7 @@ builder.policy(
     builder.type policy.policyable_type
     builder.contact policy.contact
     builder.embargo policy.embargo
+    builder.print_version policy.print_version
     builder.methodOfAcquisition policy.method_of_acquisition
     builder.note policy.note
     builder.shouldRequestOptOutPapers policy.should_request

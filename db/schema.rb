@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130725170149) do
+ActiveRecord::Schema.define(version: 20141211195340) do
 
   create_table "entity_refs", force: true do |t|
     t.text     "refvalue"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20130725170149) do
     t.string   "policyable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "print_version"
   end
 
   add_index "policies", ["policyable_id"], name: "index_policies_on_policyable_id"
