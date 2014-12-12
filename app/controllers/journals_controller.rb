@@ -17,13 +17,12 @@ class JournalsController < ApplicationController
       end
     end
 
+    # FIXED - pagination not working since sunspot results appear starting at page 1 
+    # TODO propagate actual page number in pagination 
     @results = Kaminari.paginate_array(
-        searcher.results, total_count: searcher.hits.total_count).page(page).per(15)
+        searcher.results, total_count: searcher.hits.total_count).page(1).per(15)
 
-    respond_with(@refable) do |format|
-      format.html { render 'refable/index' }
-      format.json { render json: refables_to_json(@results) }
-    end
+    render 'refable/index'
   end
 
   # GET /journals/1
