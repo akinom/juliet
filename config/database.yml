@@ -9,9 +9,9 @@ development:
   pool: 5
   timeout: 5000
 
-poarwigdemo:
+qa:
     adapter: sqlite3
-    database: db/poarwigdemo.sqlite3
+    database: db/qa.sqlite3
     pool: 5
     timeout: 5000
 
