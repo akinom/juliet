@@ -38,10 +38,6 @@ gem 'ejs'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 
-group :production do
-  gem 'pg'
-end
-
 group :development, :test do
     gem 'rspec-rails', '~> 3.0.0'
     gem "better_errors"
