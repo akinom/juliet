@@ -1,6 +1,6 @@
 #!/bin/tcsh 
-rake 'data:file[publisher,  data/publishers]'
-rake 'data:file[journal,    data/journals.elsevier,         Elsevier]'
-rake 'data:file[journal,    data/journals.wiley,            John Wiley and Sons]'
-rake 'data:file[journal,    data/journals.ams,              American Mathematical Society]'
-rake 'data:file[journal,    data/journals.taylorfrancis,    Taylor & Francis]'
+bundle exec rake 'data:file[publisher,  data/publishers]'
+bundle exec rake 'data:file[journal,    data/journals.elsevier,         Elsevier]'
+bundle exec rake 'data:file[journal,    data/journals.wiley,            John Wiley and Sons]'
+bundle exec rake 'data:file[journal,    data/journals.ams,              American Mathematical Society]'
+bundle exec rake 'data:file[journal,    data/journals.taylorfrancis,    Taylor & Francis]'
